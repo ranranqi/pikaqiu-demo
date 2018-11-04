@@ -97,7 +97,7 @@
     }
 
     /*
-     * 画皮卡丘的右眼
+     * 画皮卡丘的眼珠子
      */
 
     .eye::before {
@@ -140,11 +140,11 @@
         margin-left: 92px;
         top: 84px;
     }
-    
-    /*
-     * 画皮卡丘的上嘴唇
-     */
 
+    /*
+    * 画皮卡丘的上嘴唇
+    */
+   
     .upperLip {
         width: 65px;
         height: 29px;
@@ -169,10 +169,6 @@
         transform: rotate(27deg);
     }
 
-    /*
-     * 画皮卡丘的下嘴唇
-     */
-
     .lowerLip-wrapper {
         width: 110px;
         height: 127px;
@@ -182,7 +178,10 @@
         margin-right: -55px;
         overflow: hidden;
     }
-    
+    /*
+     * 画皮卡丘的下嘴唇
+     */
+
     .lowerLip {
         width: 160px;
         height: 900px;
