@@ -1,38 +1,38 @@
 !function(){
+    $('.actions').on('click','button',function(e){
+        let $button = $(e.currentTarget)
+        let speed = $button.attr('data-speed')
+        $button.addClass('active').siblings('.active').removeClass('active')
+        switch(speed){
+            case 'slow':
+                duration = 120
+                break
+            case 'normal':
+                duration = 60
+                break
+            case 'fast':
+                duration = 0
+                break
+        }
+    })
+    var duration = 60
     function writeCode(prefix, code , fn){
         let container = document.querySelector('#code')
         let styleTag = document.querySelector('#styleTag')
         let n = 0
-        var id = setInterval(()=>{
+        var id = setTimeout(function run(){
             n += 1
             container.innerHTML = Prism.highlight(prefix + code.substring(0, n), Prism.languages.css, 'css')
-            
             styleTag.innerHTML = code.substring(0,n)
             container.scrollTop = container.scrollHeight
-            if(n >= code.length){
-                window.clearInterval(id)
-                fn && fn()
+            if(n < code.length){
+                id = setTimeout(run,duration)
+            }else{
+                fn && fn.call()
             }
-        },5)
+        },20)
     }
     let code = `
-    /* 我需要一点代码高亮 */
-    .token.selector{
-        color: #A6E22E;
-    }
-    .token.property{
-        color: #66D9EF;
-    } 
-    .token.function{
-        color: #FF070B;
-    }
-    .token.punctuation{
-        color: #F8F8F2;
-    }
-    #code{
-        color: #AE81FF;
-    }
-
     /*
      * 首先，画皮卡丘的皮
      */
