@@ -5,13 +5,13 @@
         $button.addClass('active').siblings('.active').removeClass('active')
         switch(speed){
             case 'slow':
-                duration = 120
+                duration = 100
                 break
             case 'normal':
-                duration = 60
+                duration = 50
                 break
             case 'fast':
-                duration = 0
+                duration = 10
                 break
         }
     })
@@ -30,7 +30,7 @@
             }else{
                 fn && fn.call()
             }
-        },20)
+        },duration)
     }
     let code = `
     /*
