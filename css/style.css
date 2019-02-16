@@ -71,7 +71,7 @@ body {
 }
 .actions >button.active{
     box-shadow: 4px 4px 8px rgba(0,0,0,0.8);
-    background: rgb(107, 139, 130); 
+    background: rgb(175, 197, 216); 
     border-radius: 2px;
 }
 .actions >button:focus{
