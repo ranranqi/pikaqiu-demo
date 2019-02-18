@@ -8,10 +8,10 @@
                 duration = 100
                 break
             case 'normal':
-                duration = 50
+                duration = 60
                 break
             case 'fast':
-                duration = 10
+                duration = 20
                 break
         }
     })
